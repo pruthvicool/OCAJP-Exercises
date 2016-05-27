@@ -124,9 +124,14 @@ public abstract class KeyWords {
 	    }
 	}
 	
-	strictfp interface StrictFPInterface {
+	interface StrictFPInterface {
 	    double calculate();
 	    strictfp double compute();    // compile error
+	}
+	
+	strictfp interface StrictFPInterfaceWithoutMethod {
+	    double calculate();
+	    double compute();    // compile error
 	}
 	
 	class StrictFPMethod {
@@ -134,6 +139,12 @@ public abstract class KeyWords {
 	        return x + y;
 	    }
 	}
+	strictfp class StrictFPClassWithMethod {
+	    strictfp double computeTotal(double x, double y) {
+	        return x + y;
+	    }
+	}
+	
 	
 	class CheckSuperKeywordClass extends Identifiers{
 		public CheckSuperKeywordClass() {
