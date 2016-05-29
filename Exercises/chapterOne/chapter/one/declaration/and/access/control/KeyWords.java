@@ -54,6 +54,8 @@ public abstract class KeyWords {
 			continue;
 	}
 	
+	default int i=0;  // Cannot be used as access modifier
+	
 	void doMethod(){
 		do{
 			
@@ -115,7 +117,12 @@ public abstract class KeyWords {
 	/**
 	 * strictfp is a keyword in the Java programming language that restricts 
 	 * floating-point calculations to ensure portability. 
+	 * 
+	 * Can be used only with Class and Methods. Not on variables. 
 	 */
+	
+	strictfp int strictfpVariable =0;
+	
 	strictfp class StrictFPClass {
 	    double num1 = 10e+102;
 	    double num2 = 6e+08;
