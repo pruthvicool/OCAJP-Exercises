@@ -133,7 +133,8 @@ public abstract class KeyWords {
 	
 	interface StrictFPInterface {
 	    double calculate();
-	    strictfp double compute();    // compile error
+	    strictfp double compute();    // All interface methods are by default "public" + "abstract"
+	    							  // So, "final", "strictfp" and "native" non-access modifiers are not permitted
 	}
 	
 	strictfp interface StrictFPInterfaceWithoutMethod {
