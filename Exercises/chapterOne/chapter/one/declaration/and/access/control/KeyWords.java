@@ -98,7 +98,14 @@ public abstract class KeyWords {
 	
 	long longValue;
 	
+	/**
+	 * "native" can only be applied to methods, not class not variables
+	 */
 	native void nativeMethod();
+	native int nativeValue = 0;
+	native class NativeClass {
+		   
+ 	}
 	
 	private int privateInt;
 	
@@ -165,14 +172,26 @@ public abstract class KeyWords {
 	 * All synchronized blocks synchronized on the same object can only have one thread 
 	 * executing inside them at the same time.
 	 */
-	
 	synchronized void synchronizedMethod(){}
+	public synchronized void publicSynchronizedMethod(){}
+	private synchronized void privateSynchronizedMethod(){}
+	protected synchronized void protectedSynchronizedMethod(){}
 	
 	void synchronizedBlock(){
 		//Only object can be provided
 		synchronized(newKeyWordCheck){
 			
 		}
+	}
+	
+
+	/**
+	 * "synchronized" can only applied to method, not to class, not to variables
+	 */
+	
+	synchronized int i= 0;
+	synchronized class MyClass {
+		
 	}
 	
 	void methodWithThrow(){
