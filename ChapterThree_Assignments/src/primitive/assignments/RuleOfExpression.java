@@ -1,6 +1,6 @@
 package primitive.assignments;
 
-public class RuleOfByte {
+public class RuleOfExpression {
 
 	public static void main(String[] args) {
 
